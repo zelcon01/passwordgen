@@ -17,25 +17,25 @@ function generatePassword () {
   var numbers = "0123456789";
   var specialCharacters = "!£$%^&*()_+-=:;@></?\|*-+";
   
-  var pswLegnth = window.prompt("How many characters would you like your password to have?");
+  var pswLegnth = window.prompt("How long do you want the password to be?");
   if(isNaN(pswLegnth)) {
-    window.alert("please enter a number.");
+    window.alert("Pick a number - any number.");
     return;
   }
 
   if (pswLegnth < 8 || pswLegnth > 128) {
-    window.alert("Please enter a number between 8 and 128");
+    window.alert("Okay, really it needs to be between 8 and 128");
     return;
     }
   
   // Find out what types of characters should be included
-  var pswLowerCase = window.confirm("Click OK to confirm including lowercase characters");
-  var pswUpperCase = window.confirm("Click OK to confirm including uppercase characters");
-  var pswNumeric = window.confirm("Click OK to confirm including numeric characters");
-  var pswSpecial = window.confirm("Click OK to confirm including special characters");
+  var pswLowerCase = window.confirm("Click OK to use lowercase characters");
+  var pswUpperCase = window.confirm("Click OK to use including uppercase characters");
+  var pswNumeric = window.confirm("Click OK to use including numeric characters");
+  var pswSpecial = window.confirm("Click OK to use including special characters");
 
   if (!pswLowerCase && !pswUpperCase && !pswNumeric && !pswSpecial) {
-    window.alert("you need to include something in your password mate");
+    window.alert("you need to include SOMETHING in your password mate lol");
     return;
   }
 
